@@ -1,0 +1,12 @@
+#left{
+  width: 20%;
+  float: left;
+  position: fixed;
+  text-align: center;
+  border-right: solid;
+  height: 914px;
+  margin-top: -20px;
+}
+#right{
+  padding-left: 400px;
+}

@@ -1,0 +1,13 @@
+<div id="right">
+  <h1 style="text-align: center">User</h1>
+  <ul class="users">
+  <h4><%= link_to "New_user", account_new_path  %></h4>
+    <% @accounts.each do |account| %>
+      <li>
+        <%= link_to account.name, admin_account_path(account) %>
+            <%= link_to "Delete", admin_account_path(account), method: :delete,
+          data: {confirm: "You sure?"} %>
+      </li>
+    <% end %>
+  </ul>
+</div>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Lms</title>
+  <%= csrf_meta_tags %>
+
+  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  <style>
+  table, td {
+      border: 1px solid black;
+      border-collapse: collapse;
+      width: 70%;
+      margin-left: 40px;
+      font-size: 20px;
+  }
+  </style>
+</head>
+
+<body>
+  <%= render 'shared/header' %>
+  <div id="left">
+    <h1>Admin</h1>
+    <table style="width:80%" >
+      <tr>
+        <td><%= link_to "Courses", "#" %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Users", admin_accounts_path %></td>
+      </tr>
+      <tr>
+        <td><%= link_to "Lession", "#" %></td>
+      </tr>
+    </table>
+  </div>
+    <%= yield %>
+</body>
+</html>
